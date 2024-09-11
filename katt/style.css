@@ -1,0 +1,33 @@
+body {
+    text-align: center;
+    color: white;
+    background-color: black;
+    font-family: Arial;
+}
+    
+h1 {
+  font-size: 100px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 14px;
+
+}
+
+.flex {
+    display: flex;
+    
+    justify-content: center;
+
+}
+
+.text {
+    
+    width: 500px;
+}
+
+
