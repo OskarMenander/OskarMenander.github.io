@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    overscroll-behavior: none;
+    margin: 0;
+    max-width: 100%;
+}
+
+nav {
+    text-align: right;
+    padding-right: 20px;
+    
+}
+
+.h111{
+    text-align: center;
+}
+
+.h111 h1 {
+    font-size: 70px;
+    color: green;
+    margin-bottom: 0;
+}
+
+.h111 h2{
+    font-size: 50px;
+    margin-top: 0;
+}
+
+.justin {
+    text-align: right;
+
+}
+
+.banner img {
+    width: 100%;
+    height: 700px;
+}
+
+.aboutthebands {
+    font-size: 100px;
+    text-align: center;
+}
+
+#image-container {
+    width: 300px; /* Anpassa storlek */
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+#image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    transition: opacity 1s ease-in-out;
+}
+
+
+.queen {
+    display: flex;
+    height: 175px;
+    padding-left: 21%;
+    margin-top: 100px;
+}
+
+.freddie {
+    display: flex;
+    margin-left: 300px;
+    height: 500px;
+}
+
+h3 {
+    font-weight: 100;
+    margin-left: 230px;
+    margin-right: 1000px;
+}
+
+.almostqueen {
+    display: flex;
+    height: 175px;
+    padding-left: 300px;
+    margin-top: 50px;
+}
+
+.jackson {
+    display: flex;
+    height: 450px;
+    width: 450px;
+    margin-left: 200px;
+    margin-top: 50px;
+}
+
+.jacksonlogo {
+
+    margin-left: 110px;
+    margin-bottom: 150px;
+}
+
+.banner img {
+    filter:invert(100)
+}
+
+.mjlive {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 100px;
+    
+}
+
+.zeppelin img {
+    width: 300px;
+    height: 300px;
+}
+
+.led {
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 20px;
+}
+
+
+.led-text {
+    /* background: blue; */
+    width: 700px;
+
+}
+.led-img {
+    /* background-color: green; */
+}
+
+.led-img img{
+    width: 700px;
+}
+
+.band {
+    text-align: center;
+    margin-top: 150px;
+    font-size: 40px;
+}
+
+.band2 {
+    margin: 175px;
+    text-align: center;
+    font-size: 10px;
+}
+
+.custom-grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    width: 200px;
+    height: 200px;
+    margin-left: 850px;
+}
+.custom-grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightblue;
+    border: 1px solid #000;
+    font-size: 200px;
+    font-weight: bold;
+    max-width: 100%;
+}
