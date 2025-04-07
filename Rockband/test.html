@@ -9,27 +9,43 @@
             box-sizing: border-box;
         }
 
-        p {
-            display: inline;
-            /* border: 5px solid pink; */
+        
+        .box {
+            /* display: inline; */
+            background-color: red;
+            display: grid;
+            grid-template-columns: 1fr auto;
         }
 
-        p:first-of-type {
-            /* background-color: green; */
-            padding-right: 50px;
-            margin-right: 50px;
+        .box > * {
+            /* background-image: linear-gradient( white, black); */
         }
-        p:last-of-type {
-            padding-left: 50px;
-            margin-left: 50px;
-            /* background-color: blue; */
+
+        .oskar {
+            background-color: green;
+            display: inline;
+
         }
+
+        .viggo {
+            background-color: yellow;
+        }
+
+ 
 
 
     </style>
 </head>
 <body>
-    <p>hej</p>
-    <p>då</p>
+    <div class="box">
+        <div>
+            <div class="oskar">o</div>
+            <div class="viggo">v</div>
+            <div class="tobias">t</div>
+        </div>
+        <h1>ocbwobvovb</h1>
+
+    </div>
+
 </body>
 </html>
