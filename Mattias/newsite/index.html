@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <title>Din Kundvagn – TechButiken</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    header {
+      background-color: #222;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1, h2 {
+      margin-top: 0;
+    }
+
+    .produkt {
+      border-bottom: 1px solid #ddd;
+      padding: 15px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .produkt:last-child {
+      border: none;
+    }
+
+    .knapp {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .summa {
+      font-size: 20px;
+      margin-top: 20px;
+      text-align: right;
+    }
+
+    a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🛒 Din Kundvagn</h1>
+    <p><a href="index.html">← Tillbaka till butiken</a></p>
+  </header>
+
+  <div class="container" id="kundvagnInnehåll">
+    <h2>Produkter i din kundvagn:</h2>
+    <!-- Produkter läggs till här via JS -->
+
+    <div class="summa">
+      Totalt: <span id="totalPris">0</span> kr
+    </div>
+
+    <button class="knapp" onclick="slutförKöp()">Slutför Köp</button>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 TechButiken AB</p>
+  </footer>
+
+  <script>
+    const produkter = [
+      { namn: "Smartphone X", pris: 7990 },
+      { namn: "4K LED-TV", pris: 5990 },
+      { namn: "USB-C Snabbladdare", pris: 199 },
+      { namn: "Silikonskal", pris: 149 },
+      { namn: "Gaming Monitor", pris: 2490 },
+      { namn: "Smartwatch Pro", pris: 2190 },
+      { namn: "Frysbox 300L", pris: 3290 },
+      { namn: "TabLite 10", pris: 2590 }
+    ];
+
+    // Låtsas att dessa är de valda produkterna
+    const valdaProdukter = JSON.parse(localStorage.getItem("kundvagn")) || [];
+
+    function visaProdukter() {
+      const innehåll = document.getElementById("kundvagnInnehåll");
+      const totalEl = document.getElementById("totalPris");
+
+      let summa = 0;
+
+      valdaProdukter.forEach(namn => {
+        const produkt = produkter.find(p => p.namn === namn);
+        if (produkt) {
+          const div = document.createElement("div");
+          div.className = "produkt";
+          div.innerHTML = `
+            <span>${produkt.namn}</span>
+            <strong>${produkt.pris} kr</strong>
+          `;
+          innehåll.insertBefore(div, totalEl.parentElement);
+          summa += produkt.pris;
+        }
+      });
+
+      totalEl.textContent = summa;
+    }
+
+    function slutförKöp() {
+      alert("Tack för ditt köp!");
+      localStorage.removeItem("kundvagn");
+      window.location.href = "index.html";
+    }
+
+    window.onload = visaProdukter;
+  </script>
+
+</body>
+</html>

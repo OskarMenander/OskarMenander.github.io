@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <title>TechButiken</title>
+  <link rel="stylesheet" href="mattias2.css">
+  
+</head>
+<body>
+
+  <header>
+    <h1>📱 Rietzy – Hitte din perfekta telefon</h1>
+  </header>
+
+  <div class="main">
+    <div class="left">
+      <input type="text" id="searchInput" class="search-bar" placeholder="Sök produkter..." onkeyup="sökProdukter()">
+
+      <div id="produktContainer">
+        <div class="produkt" data-namn="Iphone 11">
+          <img src="https://reuseit.se/wp-content/uploads/2023/08/image.png" alt="Telefon">
+          <h2>iPhone 11 – 6,1 tum, 64 GB / 128 GB / 256 GB</h2>
+          <p>Pris: 2190 kr</p>
+          <button class="knapp" onclick="läggTillIKundvagn('iPhone 11 – 6,1 tum, 64 GB / 128 GB / 256 GB')">Köp</button>
+        </div>
+
+        <div class="produkt" data-namn="Iphone 12">
+          <img src="https://files.refurbed.com/ii/iphone-12-1607327986.jpg" alt="TV">
+          <h2>iPhone 12 – 6,1 tum, 64 GB / 128 GB / 256 GB</h2>
+          <p>Pris: 2690 kr</p>
+          <button class="knapp" onclick="läggTillIKundvagn('iPhone 12 – 6,1 tum, 64 GB / 128 GB / 256 GB')">Köp</button>
+        </div>
+
+        <div class="produkt" data-namn="Iphone 13">
+          <img src="https://phonehero.cdn.imgeng.in/img/bigmodelpics/iphone-13-starlight-3.png" alt="TV">
+          <h2>iPhone 13 – 6,1 tum, 128 GB / 256 GB / 512 GB</h2>
+          <p>Pris: 3490 kr</p>
+          <button class="knapp" onclick="läggTillIKundvagn('iPhone 13 – 6,1 tum, 128 GB / 256 GB / 512 GB')">Köp</button>
+        </div>
+        <div class="produkt" data-namn="Iphone 13 Mini">
+          <img src="https://m.media-amazon.com/images/I/61toDbUWubL._AC_UF1000,1000_QL80_.jpg" alt="TV">
+          <h2>iPhone 13 mini – 5,4 tum, 128 GB / 256 GB / 512 GB</h2>
+          <p>Pris: 3290 kr</p>
+          <button class="knapp" onclick="läggTillIKundvagn('iPhone 13 mini – 5,4 tum, 128 GB / 256 GB / 512 GB')">Köp</button>
+        </div>
+        <div class="produkt" data-namn="Iphone 13 pro">
+          <img src="https://files.refurbed.com/ii/iphone-13-pro-1647242890.jpg" alt="TV">
+          <h2>iPhone 13 Pro Max – 6,7 tum, 128 GB / 256 GB / 512 GB / 1 TB</h2>
+          <p>Pris: 5490 kr</p>
+          <button class="knapp" onclick="läggTillIKundvagn('iPhone 13 Pro Max – 6,7 tum, 128 GB / 256 GB / 512 GB / 1 TB')">Köp</button>
+        </div>
+        <div class="produkt" data-namn="Iphone 12 pro">
+          <img src="https://m.media-amazon.com/images/I/61DkzK6sHOL.jpg" alt="TV">
+          <h2>iPhone 12 Pro – 6,1 tum, 128 GB / 256 GB / 512 GB</h2>
+          <p>Pris: 3690 kr</p>
+          <button class="knapp" onclick="läggTillIKundvagn('iPhone 12 Pro – 6,1 tum, 128 GB / 256 GB / 512 GB')">Köp</button>
+        </div>
+        <div class="produkt" data-namn="Iphone XR">
+          <img src="https://quickbutik.imgix.net/66352u/products/6749d12c55f64.jpeg" alt="TV">
+          <h2>iPhone XR – 6,1 tum, 64 GB / 128 GB
+          </h2>
+          <p>Pris: 1490 kr</p>
+          <button class="knapp" onclick="läggTillIKundvagn('iPhone XR – 6,1 tum, 64 GB / 128 GB')">Köp</button>
+        </div>
+        <div class="produkt" data-namn="Samsung Galaxy S25 Ultra">
+          <img src="https://cf-images.dustin.eu/cdn-cgi/image/fit=contain,format=auto,quality=75,width=828,fit=contain/image/d2000010011390652/samsung-galaxy-s25-ultra-256gb-titanium-blue.jpg" alt="TV">
+          <h2>Galaxy S25 Ultra – 6,8 tum, 256 GB / 512 GB / 1 TB</h2>
+          <p>Pris: 10990 kr</p>
+          <button class="knapp" onclick="läggTillIKundvagn('Galaxy S25 Ultra – 6,8 tum, 256 GB / 512 GB / 1 TB')">Köp</button>
+        </div>
+        <div class="produkt" data-namn="Samsung Galaxy S24">
+          <img src="https://files.refurbed.com/ii/samsung-galaxy-s24-1705559639.jpg" alt="TV">
+          <h2>Galaxy S24 – 6,2 tum, 128 GB / 256 GB</h2>
+          <p>Pris: 7790 kr</p>
+          <button class="knapp" onclick="läggTillIKundvagn('Galaxy S24 – 6,2 tum, 128 GB / 256 GB')">Köp</button>
+        </div>
+        <div class="produkt" data-namn="Samsung Galaxy Z Fold5">
+          <img src="https://m.media-amazon.com/images/I/51HW-UyfSoL._AC_UF1000,1000_QL80_.jpg" alt="TV">
+          <h2>Galaxy Z Fold5 – 7,6 tum (öppen), 256 GB / 512 GB / 1 TB</h2>
+          <p>Pris: 11499 kr</p>
+          <button class="knapp" onclick="läggTillIKundvagn('Galaxy Z Fold5 – 7,6 tum (öppen), 256 GB / 512 GB / 1 TB')">Köp</button>
+        </div>
+        <div class="produkt" data-namn="Samsung Galaxy Z Fold4">
+          <img src="https://images.samsung.com/is/image/samsung/p6pim/se/2208/gallery/se-galaxy-z-fold4-f936-sm-f936bzkceub-533130467?$624_624_PNG$" alt="TV">
+          <h2>Galaxy Z Fold4 – 7,6 tum (öppen), 256 GB / 512 GB / 1 TB</h2>
+          <p>Pris: 8990 kr</p>
+          <button class="knapp" onclick="läggTillIKundvagn('Galaxy Z Fold4 – 7,6 tum (öppen), 256 GB / 512 GB / 1 TB')">Köp</button>
+        </div>
+
+        <div class="produkt" data-namn="Samsung Galaxy A55">
+          <img src="https://files.refurbed.com/ii/samsung-galaxy-a55-5g-1713251981750375394.jpg?t=fitdesign&h=600&w=800" alt="TV">
+          <h2>Galaxy A55 – 6,6 tum, 128 GB / 256 GB</h2>
+          <p>Pris: 3690 kr</p>
+          <button class="knapp" onclick="läggTillIKundvagn('Galaxy A55 – 6,6 tum, 128 GB / 256 GB')">Köp</button>
+        </div>
+        <div class="produkt" data-namn="Galaxy M15">
+          <img src="https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-m15.jpg" alt="TV">
+          <h2>Galaxy M15 – 6,5 tum, 128 GB</h2>
+          <p>Pris: 1990 kr</p>
+          <button class="knapp" onclick="läggTillIKundvagn('Galaxy M15 – 6,5 tum, 128 GB')">Köp</button>
+        </div>
+        <div class="produkt" data-namn="Galaxy A34">
+          <img src="https://media.flixcar.com/webp/synd-asset/Samsung-119056987-se-galaxy-a34-5g-sm-a346-sm-a346bzsaeub-535568600--Download-Source--zoom.png" alt="TV">
+          <h2>Galaxy A34 – 6,6 tum, 128 GB / 256 GB
+          </h2>
+          <p>Pris: 1990 kr</p>
+          <button class="knapp" onclick="läggTillIKundvagn('Galaxy A34 – 6,6 tum, 128 GB / 256 GB')">Köp</button>
+        </div>
+        <div class="produkt" data-namn="Galaxy A35">
+          <img src="https://files.refurbed.com/ii/samsung-galaxy-a35-5g-1713430888034404146.jpg" alt="TV">
+          <h2>Galaxy A35 – 6,6 tum, 128 GB / 256 GB</h2>
+          <p>Pris: 2990 kr</p>
+          <button class="knapp" onclick="läggTillIKundvagn('Galaxy A35 – 6,6 tum, 128 GB / 256 GB')">Köp</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="section">
+        <h3>🛒 Din Kundvagn</h3>
+        <ul id="kundvagn-lista"></ul>
+        <p id="total-pris">Totalt: 0 kr</p>
+        <button class="knapp" onclick="tillKassan()">Till kassan</button>
+      </div>
+
+      <div class="section">
+        <h3>🔥 Populära Produkter</h3>
+        <ul>
+          <li>Iphone 13</li>
+          <li>Galaxy Z Fold5</li>
+          <li>Iphone 12 Pro</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>📰 Nyheter</h3>
+        <p>Nu har vi fått in nya Iphones och Samsung telefoner! Missa inte våra vårerbjudanden med upp till 20% rabatt.</p>
+      </div>
+
+      <div class="section">
+        <h3>📞 Support & Info</h3>
+        <p>Behöver du hjälp? Kontakta oss på <strong>support@rietzyllc.se</strong> eller ring <strong>08-123 456</strong>.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; Rietzy AB | All rights reserved</p>
+  </footer>
+
+  <script>
+    const kundvagn = {};
+
+    function läggTillIKundvagn(produktNamn) {
+      if (kundvagn[produktNamn]) {
+        kundvagn[produktNamn].antal += 1;
+      } else {
+        const prisText = Array.from(document.querySelectorAll('.produkt')).find(p =>
+          p.querySelector('h2').textContent === produktNamn
+        ).querySelector('p').textContent;
+
+        const pris = parseInt(prisText.replace(/\D/g, ''));
+        kundvagn[produktNamn] = { antal: 1, pris: pris };
+      }
+
+      uppdateraKundvagn();
+    }
+
+    function taBortProdukt(namn) {
+      if (kundvagn[namn]) {
+        kundvagn[namn].antal -= 1;
+        if (kundvagn[namn].antal <= 0) delete kundvagn[namn];
+        uppdateraKundvagn();
+      }
+    }
+
+    function uppdateraKundvagn() {
+      const lista = document.getElementById('kundvagn-lista');
+      const totalPrisElement = document.getElementById('total-pris');
+      lista.innerHTML = '';
+      let totalPris = 0;
+
+      for (const namn in kundvagn) {
+        const item = kundvagn[namn];
+        const rad = document.createElement('li');
+        rad.innerHTML = `${namn} x${item.antal} - ${item.pris * item.antal} kr 
+          <button onclick="taBortProdukt('${namn}')">❌</button>`;
+        lista.appendChild(rad);
+        totalPris += item.pris * item.antal;
+      }
+
+      totalPrisElement.textContent = `Totalt: ${totalPris} kr`;
+    }
+
+    function sökProdukter() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const produkter = document.querySelectorAll('.produkt');
+
+      produkter.forEach(produkt => {
+        const namn = produkt.getAttribute('data-namn').toLowerCase();
+        produkt.style.display = namn.includes(input) ? 'block' : 'none';
+      });
+    }
+
+    function tillKassan() {
+      alert('Tack för ditt köp! (detta är en demo – riktig betalning kan kopplas via t.ex. Klarna eller Stripe)');
+    }
+  </script>
+
+</body>
+</html>
